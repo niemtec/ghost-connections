@@ -678,6 +678,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     margin: 0 0 0.4em;
     line-height: 1.15em;
     transition: color 0.2s ease-in-out;
+    font-weight: 800;
 }
 
 .no-image .post-card-title {
@@ -692,8 +693,8 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 
 .post-card-excerpt {
     max-width: 56em;
-    color: var(--midgrey);
-    font-family: Georgia, serif;
+    color: (var(--darkgrey));
+    font-family: (var(--sans-serif-font));
 }
 
 .post-card-excerpt p {

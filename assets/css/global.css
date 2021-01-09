@@ -3,18 +3,21 @@
 
 :root {
     /* Colours */
-    --blue: #3eb0ef;
+    --blue: #1e88e5;
     --green: #a4d037;
     --purple: #ad26b4;
     --yellow: #fecd35;
     --red: #f05230;
-    --darkgrey: #15171A;
-    --midgrey: #738a94;
-    --lightgrey: #c5d2d9;
+    --darkgrey: #212121;
+    --midgrey: #e0e0e0;
+    --lightgrey: #fafafa;
     --whitegrey: #e5eff5;
+    --background: #ffffff;
     --pink: #fa3a57;
     --brown: #a3821a;
     --darkmode: color-mod(var(--darkgrey) l(+2%));
+    --sans-serif-font: "Roboto", sans-serif;
+
 }
 
 /* Reset
@@ -282,14 +285,14 @@ html {
 body {
     overflow-x: hidden;
     color: color-mod(var(--midgrey) l(-30%));
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: (var(--sans-serif-font));
     font-size: 1.6rem;
     line-height: 1.6em;
     font-weight: 400;
     font-style: normal;
     letter-spacing: 0;
     text-rendering: optimizeLegibility;
-    background: #fff;
+    background: (var(--background));
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
