@@ -12,11 +12,13 @@
     --midgrey: #e0e0e0;
     --lightgrey: #fafafa;
     --whitegrey: #e5eff5;
-    --background: #ffffff;
+    --background: #F5F5F5;
+    --white: #ffffff;
     --pink: #fa3a57;
     --brown: #a3821a;
     --darkmode: color-mod(var(--darkgrey) l(+2%));
     --sans-serif-font: "Roboto", sans-serif;
+    --radius: 10px;
 
 }
 

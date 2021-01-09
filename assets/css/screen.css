@@ -32,7 +32,7 @@ production stylesheet in assets/built/screen.css
 @import "global.css";
 
 body {
-    background: #fff;
+    background: var(--background);
 }
 
 .img {
@@ -74,7 +74,7 @@ body {
 /* Centered content container blocks */
 .inner {
     margin: 0 auto;
-    max-width: 1040px;
+    max-width: 1100px;
     width: 100%;
 }
 
@@ -610,9 +610,8 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     position: relative;
     display: flex;
     flex-wrap: wrap;
-    margin: 0 -20px;
     padding: 50px 0 0;
-    background: #fff;
+    background:(var(--background));
 }
 
 .post-card {
@@ -621,11 +620,12 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    margin: 0 0 40px;
-    padding: 0 20px 40px;
+    margin: 15px 10px 10px 15px 10px;
+    padding: 0 0 0;
     min-height: 220px;
-    border-bottom: 1px solid color-mod(var(--lightgrey) l(+12%));
     background-size: cover;
+    border-radius: 10px;
+    background: var(--white);
 }
 
 .post-card-image-link {
@@ -639,8 +639,10 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     width: 100%;
     height: 200px;
     background: var(--lightgrey) no-repeat center center;
-
+    border-radius: 10px;
     object-fit: cover;
+    margin-bottom: 15px;
+    box-shadow: 0 5px 15px #00000021;
 }
 
 .post-card-content-link {
@@ -654,7 +656,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 }
 
 .post-card-header {
-    margin: 15px 0 0;
+    margin: 0;
 }
 
 .post-feed .no-image .post-card-content-link {
@@ -689,12 +691,13 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     flex-grow: 1;
     display: flex;
     flex-direction: column;
+    margin: 0 15px 15px 15px;
 }
 
 .post-card-excerpt {
     max-width: 56em;
-    color: (var(--darkgrey));
-    font-family: (var(--sans-serif-font));
+    color: var(--darkgrey);
+    font-family: var(--sans-serif-font);
 }
 
 .post-card-excerpt p {
@@ -783,12 +786,13 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     display: flex;
     flex-direction: column;
     margin: 2px 0 0 6px;
-    color: color-mod(var(--midgrey) l(+10%));
+    color: color-mod(var(--darkgrey) l(+10%));
     font-size: 1.2rem;
     line-height: 1.4em;
-    font-weight: 400;
+    font-weight: 00;
     letter-spacing: 0.2px;
     text-transform: uppercase;
+    text-align: center;
 }
 
 .post-card-byline-content span {
@@ -845,7 +849,6 @@ make sure this only happens on large viewports / desktop-ish devices.
     .post-card-large {
         flex: 1 1 100%;
         flex-direction: row;
-        padding-bottom: 40px;
         min-height: 280px;
         border-top: 0;
     }
@@ -882,7 +885,8 @@ make sure this only happens on large viewports / desktop-ish devices.
     }
 
     .post-card-large .post-card-content-link {
-        padding: 0 0 0 40px;
+        padding: 0 15px 0 15px;
+
     }
 
     .post-card-large .post-card-meta {
