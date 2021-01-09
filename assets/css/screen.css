@@ -95,7 +95,7 @@ body {
     .home-template .post-feed,
     .tag-template .post-feed,
     .author-template .post-feed {
-        padding: 40px 0 5vw;
+        padding: 40px 20px 5vw 20px;
         border-top-left-radius: 3px;
         border-top-right-radius: 3px;
     }
@@ -113,8 +113,7 @@ body {
     position: relative;
     margin-top: 64px;
     padding-bottom: 12px;
-    color: #fff;
-    background: color-mod(var(--darkgrey) l(-5%)) no-repeat center center;
+    color: var(--darkgrey);
     background-size: cover;
 }
 
@@ -127,7 +126,7 @@ body {
     left: 0;
     z-index: 10;
     display: block;
-    background: rgba(0,0,0,0.18);
+    background: var(--background);
 }
 
 .site-header-background:after {
@@ -139,8 +138,8 @@ body {
     left: 0;
     z-index: 10;
     display: block;
-    height: 140px;
-    background: linear-gradient(rgba(0,0,0,0.15),rgba(0,0,0,0));
+    height: 64px;
+    background: var(--white);
 }
 
 .site-header-background.no-image:before,
@@ -149,31 +148,34 @@ body {
 }
 
 .site-header-content {
-    z-index: 100;
+    z-index: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 6vw 3vw;
+    padding: 8vw 3vw;
     min-height: 200px;
     max-height: 340px;
 }
 
 .site-title {
-    z-index: 10;
+    z-index: 0;
     margin: 0 0 0 -2px;
     padding: 0;
-    font-size: 5.0rem;
+    font-size: 7.0rem;
     line-height: 1em;
-    font-weight: 600;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    font-family: var(--header-font);
 }
 
 .site-logo {
-    max-height: 55px;
+    max-height: 70%;
 }
 
 .site-description {
-    z-index: 10;
+    z-index: 00;
     margin: 0;
     padding: 5px 0;
     font-size: 2.1rem;
@@ -186,7 +188,8 @@ body {
 /* ---------------------------------------------------------- */
 
 .site-home-header {
-    z-index: 1000;
+    z-index: 10;
+    margin-top: 65px;
 }
 
 .site-home-header .site-header-background {
@@ -194,11 +197,12 @@ body {
 }
 
 .site-home-header .site-header-content {
-    padding: 5vw 3vw 6vw;
+    margin-top: 64px;
+    padding: 8vw 3vw 8vw;
 }
 
 .site-home-header .site-title {
-    font-size: 5.5rem;
+    font-size: 7.0rem;
     text-align: center;
 }
 
@@ -283,12 +287,15 @@ body {
     right: 0;
     left: 0;
     z-index: 1000;
-    background: color-mod(var(--darkgrey) l(-5%));
+    color: #000000;
+    box-shadow: 0px 8px 24px #00000021;
+    background-color: rgba(255,255,255,.40);
+    backdrop-filter: blur(20px);
 }
 
 .site-nav {
     position: relative;
-    z-index: 100;
+    z-index: 1000;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -316,7 +323,6 @@ body {
 .site-header-background:not(.responsive-header-img) .site-nav-left-wrapper:after,
 .site-nav-main .site-nav-left-wrapper:after {
     right: 0;
-    background: linear-gradient(to right, color-mod(var(--darkgrey) l(-5%) a(0)) 0%,color-mod(var(--darkgrey) l(-5%)) 100%);
 }
 
 .site-nav-left {
@@ -355,16 +361,19 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     display: inline-block;
     margin-right: 32px;
     padding: 12px 0;
-    color: #fff;
+    color: var(--darkgrey);
+    text-transform: uppercase;
     font-size: 1.7rem;
     line-height: 1.8rem;
-    font-weight: bold;
+    font-weight: 800;
     letter-spacing: -0.5px;
-    text-transform: none;
+    transition: 0.25s ease-in-out;
 }
 
 .site-nav-logo:hover {
     text-decoration: none;
+    transition: 0.25s ease-in-out;
+    color: var(--blue);
 }
 
 .site-nav-logo img {
@@ -380,6 +389,11 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 .site-nav-content {
     position: relative;
     align-self: flex-start;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: 0.25s ease-in-out;
+    color: var(--darkgrey);
+    font-size: 1.3rem;
 }
 
 .nav {
@@ -389,7 +403,6 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     margin: 0 0 0 -12px;
     padding: 0;
     list-style: none;
-    transition: all 1.0s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 .nav li {
@@ -402,14 +415,14 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     position: relative;
     display: block;
     padding: 12px 12px;
-    color: #fff;
-    opacity: 0.8;
-    transition: opacity 0.35s ease-in-out;
+    color: var(--darkgrey);
+    transition: 0.25s ease-in-out;
 }
 
 .nav li a:hover {
     text-decoration: none;
-    opacity: 1;
+    color: var(--blue);
+    transition: 0.25s ease-in-out;
 }
 
 .nav li a:before {
@@ -444,7 +457,6 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     font-weight: 400;
     text-transform: none;
     opacity: 0;
-    transition: all 1.0s cubic-bezier(0.19, 1, 0.22, 1);
     transform: translateY(175%);
 }
 
@@ -499,40 +511,23 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     display: inline-block;
     margin: 0;
     padding: 10px;
-    opacity: 0.8;
+    font-size: 1.8rem;
+    transition: 0.25s ease-in-out;
+    color: var(--darkgrey);
 }
 
-.social-link:hover {
-    opacity: 1.0;
+.social-link:hover, .social-link:focus {
+    transition: 0.25s ease-in-out;
+    color: var(--blue);
 }
 
-.social-link svg {
-    height: 1.8rem;
-    fill: #fff;
-}
-
-.social-link-fb svg {
-    height: 1.6rem;
-}
-
-.social-link-wb svg {
-    height: 1.6rem;
-}
-
-.social-link-wb svg path {
-    stroke: #fff;
-}
-
-.social-link-rss svg {
-    height: 1.9rem;
-}
 
 .subscribe-button {
     display: block;
     margin: 0 0 0 10px;
     padding: 4px 10px;
-    border: #fff 1px solid;
-    color: #fff;
+    border: var(--darkgrey) 1px solid;
+    color: var(--darkgrey);
     line-height: 1em;
     border-radius: 10px;
     opacity: 0.8;
@@ -549,33 +544,20 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 
 .rss-button {
     padding: 10px 8px;
-    opacity: 0.8;
+    font-size: 1.8rem;
+    transition: 0.25s ease-in-out;
+    color: var(--darkgrey);
 }
 
-.rss-button:hover {
-    opacity: 1;
-}
-
-.rss-button svg {
-    margin-bottom: 1px;
-    height: 2.1rem;
-    fill: #fff;
+.rss-button:hover,.rss-button:focus {
+    transition: 0.25s ease-in-out;
+    color: var(--blue);
 }
 
 /* Special behaviors for home navigation */
 
 .home-template .site-nav-main {
     z-index: 100;
-}
-
-.home-template .site-nav-main .site-nav {
-    opacity: 0;
-    transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1) 0s;
-}
-
-.home-template .site-nav-main .fixed-nav-active {
-    opacity: 1;
-    transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1) 0.05s;
 }
 
 @media (max-width: 700px) {
@@ -610,7 +592,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     position: relative;
     display: flex;
     flex-wrap: wrap;
-    padding: 50px 0 0;
+    padding: 50px 20px 0px 20px;
     background:(var(--background));
 }
 
@@ -626,6 +608,13 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     background-size: cover;
     border-radius: 10px;
     background: var(--white);
+    transition: all .3s ease-in-out;
+}
+
+.post-card:hover {
+    box-shadow: rgba(56, 56, 56, 0.22) 0px 16px 40px;
+    /* box-shadow: rgba(30,136,229,0.2) 0px 16px 40px; */
+    transform: translate3d(0px, -2px, 0px);
 }
 
 .post-card-image-link {
@@ -671,7 +660,6 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     margin: 0 0 0.2em;
     color: var(--blue);
     font-size: 1.2rem;
-    font-weight: 500;
     letter-spacing: 0.2px;
     text-transform: uppercase;
 }
@@ -680,7 +668,9 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     margin: 0 0 0.4em;
     line-height: 1.15em;
     transition: color 0.2s ease-in-out;
-    font-weight: 800;
+    font-weight: 900;
+    text-transform: upp;
+    font-family: var(--header-font);
 }
 
 .no-image .post-card-title {
@@ -702,6 +692,8 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 
 .post-card-excerpt p {
     margin-bottom: 1em;
+    font-weight: 300;
+    color: #737373;
 }
 
 .post-card-meta {
@@ -765,7 +757,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     border-radius: 3px;
     box-shadow: rgba(39,44,49,0.08) 0 12px 26px, rgba(39, 44, 49, 0.03) 1px 3px 8px;
     opacity: 0;
-    transition: all 0.35s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+    transition: all 0.35s ease-in-out;
     transform: translateY(6px);
     pointer-events: none;
 }
@@ -1557,7 +1549,6 @@ Usage (In Ghost editor):
     height: 40px;
     border: #fff 2px solid;
     border-radius: 100%;
-    transition: all 0.5s cubic-bezier(0.4, 0.01, 0.165, 0.99) 700ms;
 }
 
 .author-list-item .author-card {
@@ -1575,7 +1566,6 @@ Usage (In Ghost editor):
     border-radius: 3px;
     box-shadow: rgba(39,44,49,0.08) 0 12px 26px, rgba(39, 44, 49, 0.06) 1px 3px 8px;
     opacity: 0;
-    transition: all 0.35s cubic-bezier(0.4, 0.01, 0.165, 0.99);
     transform: scale(0.98) translateY(15px);
     pointer-events: none;
 }
@@ -2601,7 +2591,7 @@ Usage (In Ghost editor):
     color: #fff;
     text-align: center;
     background: var(--green);
-    transition: all 0.35s cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
+    transition: all 0.35s ease-in-out;
     transform: translateY(-175%);
 }
 
@@ -2621,7 +2611,7 @@ Usage (In Ghost editor):
 
 .subscribe-notification.close {
     visibility: hidden;
-    transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
+    transition: all 1.35s ease-in-out;
     transform: translateY(-175%);
 }
 
@@ -2890,7 +2880,7 @@ Usage (In Ghost editor):
 
 /* 12. Dark Mode
 /* ---------------------------------------------------------- */
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
     body {
         color: rgba(255, 255, 255, 0.75);
         background: var(--darkmode);
@@ -3116,4 +3106,4 @@ Usage (In Ghost editor):
     .subscribe-form .success .message-success {
         color: color-mod(var(--green) l(+5%) s(-5%));
     }
-}
+} */
