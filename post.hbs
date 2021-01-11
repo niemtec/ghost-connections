@@ -52,7 +52,7 @@ into the {body} of the default.hbs template --}}
             
                     <section class="post-full-byline-content">
             
-                        <ul class="author-list">
+                        {{!-- <ul class="author-list">
                             {{#foreach authors}}
                             <li class="author-list-item">
             
@@ -86,10 +86,10 @@ into the {body} of the default.hbs template --}}
             
                             </li>
                             {{/foreach}}
-                        </ul>
+                        </ul> --}}
             
                         <section class="post-full-byline-meta">
-                            <h4 class="author-name">{{authors}}</h4>
+                            {{!-- <h4 class="author-name">{{authors}}</h4> --}}
                             <div class="byline-meta-content">
                                 <time class="byline-meta-date" datetime="{{date format=" YYYY-MM-DD"}}">{{date format="D MMM
                                     YYYY"}}</time>
@@ -144,7 +144,7 @@ into the {body} of the default.hbs template --}}
                             <li>
                                 <h4><a href="{{url}}">{{title}}</a></h4>
                                 <div class="read-next-card-meta">
-                                    <p><time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMM YYYY"}}</time> –
+                                    <p><time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMM YYYY"}}</time> &bull;
                                         {{reading_time}}</p>
                                 </div>
                             </li>

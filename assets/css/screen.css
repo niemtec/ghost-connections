@@ -953,13 +953,18 @@ make sure this only happens on large viewports / desktop-ish devices.
 .post-full-header {
     position: relative;
     margin: 0 auto;
-    padding: 70px 170px 50px;
+    padding: 0 170px 70px;
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.post-full-header h1 {
+    font-size: 4.5em;
 }
 
 .post-full-tags {
-    display: flex;
     justify-content: flex-start;
     align-items: center;
     color: var(--midgrey);
@@ -967,6 +972,7 @@ make sure this only happens on large viewports / desktop-ish devices.
     line-height: 1.4em;
     font-weight: 600;
     text-transform: uppercase;
+    margin-bottom: 20px;
 }
 
 .post-full-meta-date {
@@ -1018,7 +1024,7 @@ make sure this only happens on large viewports / desktop-ish devices.
     flex-direction: column;
     align-items: center;
     overflow: hidden;
-    margin: 50px 0 50px;
+    margin: 50px 0;
     border-radius: 3px;
     padding: 30px;
 }
@@ -1555,13 +1561,12 @@ Usage (In Ghost editor):
 .post-full-byline {
     display: flex;
     justify-content: space-between;
-    margin: 35px 0 0;
+    margin: 15px 0 0;
     padding-top: 15px;
 }
 
 .post-full-byline-content {
     flex-grow: 1;
-    display: flex;
     align-items: flex-start;
 }
 
@@ -1602,6 +1607,7 @@ Usage (In Ghost editor):
 }
 .byline-meta-content {
     color: var(--darkgrey);
+    font-size: 1.4em;
 }
 
 .author-avatar {
@@ -2069,7 +2075,7 @@ Usage (In Ghost editor):
 
 .read-next-card-meta {
     margin-top: 2px;
-    font-size: 1.2rem;
+    font-size: 1em;
     line-height: 1.4em;
     font-weight: 400;
 }
@@ -2089,7 +2095,7 @@ Usage (In Ghost editor):
     padding: 10px 15px 10px 15px;
     border: 1px solid rgba(255, 255, 255, 0.8);
     color: var(--darkgrey);
-    font-size: 1.3rem;
+    font-size: 0.95em;
     border-radius: var(--radius);
     background: rgba(255,255,255,0.8);
     transition: all 0.35s ease-in-out;
