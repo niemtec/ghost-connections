@@ -2612,24 +2612,46 @@ Usage (In Ghost editor):
 
 .error-code {
     margin: 0;
-    color: var(--lightgrey);
-    font-size: 12vw;
+    /* color: var(--lightgrey); */
+    font-size: 14vw;
     line-height: 1em;
-    letter-spacing: -5px;
-    opacity: 0.75;
+    background: -webkit-linear-gradient(147deg, #232526, #414345);
+    -moz-background-clip: text;
+    -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .error-description {
     margin: 0;
-    color: var(--midgrey);
+    text-transform: uppercase;
     font-size: 3rem;
     line-height: 1.3em;
     font-weight: 400;
+    background: -webkit-linear-gradient(147deg, #232526, #414345);
+    -moz-background-clip: text;
+    -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .error-link {
     display: inline-block;
-    margin-top: 5px;
+    margin-top: 20px;
+    padding: 10px 15px 10px 15px;
+    border: 1px solid var(--blue);
+    color: var(--white);
+    text-decoration: none;
+    font-size: 0.95em;
+    border-radius: var(--radius);
+    background: var(--blue);
+    transition: all 0.35s ease-in-out;
+    box-shadow: 0px 8px 24px #0044ffa6;
+}
+
+.error-link:hover {
+    transition: all .3s ease-in-out;
+    box-shadow: #001f74a6 0px 16px 40px;
+    transform: translate3d(0px, -2px, 0px);
+    text-decoration: none;
 }
 
 @media (min-width: 940px) {
